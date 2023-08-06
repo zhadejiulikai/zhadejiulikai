@@ -1,0 +1,12 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: development server
+    init: make install
+    command: make dev
+
+vscode:
+  extensions:
+    - redhat.vscode-yaml
+    - DavidAnson.vscode-markdownlint

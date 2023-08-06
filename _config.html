@@ -1,0 +1,45 @@
+title: Zigbee Device Compatibility Repository
+description: Database of Zigbee devices compatible with ZHA, Tasmota, Zigbee2MQTT, deCONZ, ZiGate and ioBroker
+url: "https://zigbee.blakadder.com"
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable : true
+remote_theme: alexander-heimbuch/millidocs
+strict_front_matter: true
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor/
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+collections:
+  zigbee:
+    output: true
+    permalink: /:title.html
+
+defaults:
+  - scope:
+      path: ""
+      type: "zigbee"
+    values:
+      layout: "zigbee"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+google_analytics: UA-140681905-3
+
+image_processing:
+  table:
+    source: assets/images/devices
+    destination: assets/images/devices-table
+    resize_to_limit: [~, 75]
